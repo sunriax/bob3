@@ -22,9 +22,9 @@ echo  --------------------
 echo  %2
 echo.
 
-type %1bob3.top.config > %2.bob3
+type bob3.top.config > %2.bob3
 type %2.hex >> %2.bob3
-type %1bob3.bot.config >> %2.bob3
+type bob3.bot.config >> %2.bob3
 
 echo.
 echo  Executing Programmer

@@ -1,4 +1,4 @@
-﻿# STK500 Repository!
+﻿# BOB3 Repository!
 
 [![Version: 1.0 Release](https://img.shields.io/badge/Version-1.0%20Release-green.svg)](https://github.com/sunriax) [![Slack: Join](https://img.shields.io/badge/Slack-Join-blue.svg)](https://join.slack.com/t/sunriax-technology/shared_invite/enQtMjg3OTE2MjIyMTE2LTU1MmEwNmY5Y2Y3MTNjNzFhYzE5NTFkYWY4NzE0YmQzNzA5NjBkMWQ3ODkyNDI1NjJmMGIwYzMwOGI5ZjA2MDg)
 
@@ -26,7 +26,7 @@ First you should install BobDude which is needed to program bob3. Tool can be fo
 
 * [BobDude](https://www.bob3.org/de/code)
 
-After that clone or download the repository and copy the batch file ("bob3hex.bat") to the BobDude directory ("C:\Program Files\BobDude\bin\bobdude"). Then open the Microchip Atmel Studio solution in the cloned/downloaded directory.
+After that clone or download the repository and copy the batch file ("bob3hex.bat") and the config files ("bob3.top.config", "bob3.bot.config") to the BobDude directory ("C:\Program Files\BobDude\bin\bobdude", or your installation directory). Then open the Microchip Atmel Studio solution in the cloned/downloaded directory.
 
 ![Add external tool](https://raw.githubusercontent.com/sunriax/manual/master/docs/image/bob3_external.png "Add external tool")
 ![Setup external tool](https://raw.githubusercontent.com/sunriax/manual/master/docs/image/bob3_external_setup.png "Setup external tool")
