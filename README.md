@@ -26,7 +26,11 @@ First you should install BobDude which is needed to program bob3. Tool can be fo
 
 * [BobDude](https://www.bob3.org/de/code)
 
-After that clone or download the repository and copy the batch file ("bob3hex.bat") and the config files ("bob3.top.config", "bob3.bot.config") to the BobDude directory ("C:\Program Files\BobDude\bin\bobdude", or your installation directory). Then open the Microchip Atmel Studio solution in the cloned/downloaded directory.
+After that clone or download the repository check if the bobdude.exe path in batch file ("bob3hex.bat") is correct. Then open the Microchip Atmel Studio solution in the cloned/downloaded directory.
+
+## External Tools
+
+To start the Programmer with the correct file, it is necessary to configure External Tools *.).
 
 ![Add external tool](https://raw.githubusercontent.com/sunriax/manual/master/docs/image/bob3_external.png "Add external tool")
 ![Setup external tool](https://raw.githubusercontent.com/sunriax/manual/master/docs/image/bob3_external_setup.png "Setup external tool")
@@ -42,7 +46,7 @@ BOB3
 ### Command
 
 ```
-C:\Program Files\BobDude\bin\bobdude\bob3hex.bat
+%userprofile%\Template\bob3hex.bat
 ```
 
 ### Arguments
@@ -51,16 +55,30 @@ C:\Program Files\BobDude\bin\bobdude\bob3hex.bat
 $(SolutionDir) $(TargetDir)$(TargetName)
 ```
 
-After that just click Ok and the Tool should be integrated!
+Just click Ok and the Tool should be integrated!
 
 ![Completed external tool](https://raw.githubusercontent.com/sunriax/manual/master/docs/image/bob3_external_complete.png "Completed external tool")
 
-After that build the template project and hit the Bob3 button in the tools menu.
+Build the template project and hit the Bob3 button in the tools menu.
 
 ![Build Template](https://raw.githubusercontent.com/sunriax/manual/master/docs/image/bob3_build_template.png "Build Template")
 ![Flash Template](https://raw.githubusercontent.com/sunriax/manual/master/docs/image/bob3_flash_template.png "Flash Template")
 
-After that hit the Program button in BobDude software and the Template application should run on Bob3!
+Now it is time to hit the Program button in BobDude software and the Template application should run on Bob3!
+
+## Additional Information
+
+*.) If the External Tool menu is not available, please follow additional steps:
+
+
+![Select Profile](https://raw.githubusercontent.com/sunriax/manual/master/docs/image/bob3_profile.png "Select Profile")
+![Advanced Profile](https://raw.githubusercontent.com/sunriax/manual/master/docs/image/bob3_advanced.png "Advanced Profile")
+
+
+You can find more additional information in the [manual](https://github.com/sunriax/manual/tree/master/docs) repository and/or visit the [SUNriaX Project Wiki](https://wiki.sunriax.at/) for further information (currently under construction).
+
+If there are any further questions feel free to start an issue or contact us, we try to react as quick as possible.
+
 
 ## Important Notice
 
@@ -68,12 +86,6 @@ This files are valid for all repositories at the SUNriaX Github!
 * [Readme](https://github.com/sunriax/manual/blob/master/README.md)
 * [License](https://github.com/sunriax/manual/blob/master/LICENSE.md)
 * [Warranty](https://github.com/sunriax/manual/blob/master/WARRANTY.md)
-
-## Additional Information
-
-You can find more additional information in the [manual](https://github.com/sunriax/manual/tree/master/docs) repository and/or visit the [SUNriaX Project Wiki](https://wiki.sunriax.at/) for further information (currently under construction).
-
-If there are any further questions feel free to start an issue or contact us, we try to react as quick as possible.
 
 ---
 **R. GÄCHTER, Rankweil Oct/2018**

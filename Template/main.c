@@ -17,12 +17,16 @@
 #define F_CPU 8000000UL
 #define WAIT 250
 
-// Setup EYE of Bob3
+// EYEs of Bob3
 #define EYE_L PB1
 #define EYE_R PB2
 #define LED_R PD6
 #define LED_G PD5
 #define LED_B PD3
+
+// LEDs of Bob3
+#define LED_RIGHT PB6
+#define LED_LEFT  PB7
 
 // System Libraries
 #include <avr/io.h>
@@ -38,6 +42,9 @@ int main(void)
 	PORTB &= ~((1<<EYE_L) | (1<<EYE_R));
 	PORTD &= ~((1<<LED_R) | (1<<LED_G) | (1<<LED_B));
 	
+	DDRB |= (1<<LED_LEFT) | (1<<LED_RIGHT);		// PB7, PB6 auf Ausgang (Rest unver�ndert)
+	PORTB &= ~((1<<LED_LEFT) | (1<<LED_RIGHT));	// PB7, PB6 ausschalten
+
 	while (1)
 	{	
 		// Display eyes in different colors
