@@ -35,15 +35,15 @@
 int main(void)
 {
 	// Initialize Data Direction Registers
-	DDRB |= (1<<EYE_R) | (1<<EYE_L);
+	DDRB |= (1<<EYE_R) | (1<<EYE_L) | (1<<LED_LEFT) | (1<<LED_RIGHT);
 	DDRD |= (1<<LED_R) | (1<<LED_G) | (1<<LED_B);
   
 	// Turn eyes off
 	PORTB &= ~((1<<EYE_L) | (1<<EYE_R));
 	PORTD &= ~((1<<LED_R) | (1<<LED_G) | (1<<LED_B));
 	
-	DDRB |= (1<<LED_LEFT) | (1<<LED_RIGHT);		// PB7, PB6 auf Ausgang (Rest unver�ndert)
-	PORTB &= ~((1<<LED_LEFT) | (1<<LED_RIGHT));	// PB7, PB6 ausschalten
+	// Turn leds off
+	PORTB &= ~((1<<LED_LEFT) | (1<<LED_RIGHT));
 
 	while (1)
 	{	
